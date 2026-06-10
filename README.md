@@ -4,8 +4,6 @@
 
 ![QR kod do dokumentu](qr_kzm.jpg)
 
-*Dla pielęgniarki ze znajomym po odkleszczowym zapaleniu mózgu z porażeniem. Czerwiec 2026.*
-
 > **Zastrzeżenie:** Dokument ma charakter wyłącznie informacyjny i edukacyjny. Nie stanowi porady medycznej, diagnozy ani zalecenia terapeutycznego w rozumieniu prawa medycznego. Przytoczone badania są cytowane zgodnie z ich opublikowaną treścią, ale ich interpretacja w kontekście konkretnego pacjenta wymaga oceny lekarza prowadzącego znającego pełną historię choroby. Autor nie ponosi odpowiedzialności za decyzje podjęte wyłącznie na podstawie tego dokumentu. Dokument został opracowany przez osobę zajmującą się interdyscyplinarnym researchem i weryfikacją źródeł pierwotnych, polegającą na bezpośrednim sięganiu do baz danych publikacji naukowych i sprawdzaniu twierdzeń pod kątem tego co faktycznie mówią cytowane badania, a nie przez klinicystę. To jest tu zaletą, nie ograniczeniem: synteza badań z neurologii, biochemii i fizyki medycznej w jednym miejscu nie powstaje w ramach żadnej specjalizacji klinicznej, bo każda z nich siedzi we własnym piśmiennictwie.
 
 Ten dokument powstał z jednego powodu: żeby ktoś, kto czyta go w obliczu poważnej choroby, miał w ręku biologiczne uzasadnienie do próbowania, a nie tylko listę rzeczy, na które nie ma wytycznych.
