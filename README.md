@@ -1,5 +1,7 @@
 ## Trzy warstwy uszkodzenia mózgu w KZM i co może na każdą z nich działać
 
+**PUBLIKACJA** 10.06.2026 r
+
 *Link do tego dokumentu:*
 
 ![QR kod do dokumentu](qr_kzm.jpg)
