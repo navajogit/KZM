@@ -1,6 +1,6 @@
 ## Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych
 
-**PUBLIKACJA** 10.06.2026 r
+**PUBLIKACJA** 15.06.2026 r
 
 *Link do tego dokumentu:*
 
@@ -150,9 +150,36 @@ Modele językowe AI są użytecznym narzędziem do weryfikacji twierdzeń biolog
 
 Nowoczesne modele językowe są trenowane w dwóch etapach. Pierwszy (pre-training) uczy modelu biologii, biochemii i medycyny z literatury naukowej. Drugi (fine-tuning bezpieczeństwa, technicznie: RLHF) uczy modelu jak odpowiadać na pytania medyczne w sposób który minimalizuje ryzyko krzywdy dla przeciętnego użytkownika bez wykształcenia klinicznego.
 
-Efektem tego drugiego etapu jest wyuczony klasyfikator wzorców. Model nauczył się że pewna kombinacja elementów w tekście — substancja lub procedura medyczna, choroba człowieka, mechanizm biologiczny, kontekst kliniczny — jest sygnałem do uruchomienia odpowiedzi ostrożnościowej. Ten wzorzec jest wykrywany niezależnie od tego jak starannie sformułowane są zastrzeżenia epistemologiczne wokół niego. Dla modelu trenowanego na miliardach par pytanie-odpowiedź, zdanie "neurolog może rozważyć X" i zdanie "literatura sugeruje biologiczną plausybilność X w schorzeniach zbliżonych mechanistycznie do tej choroby" uruchamiają ten sam klasyfikator. To nie jest błąd modelu, to jego zamierzone działanie chroniące miliony użytkowników bez wykształcenia medycznego przed błędnymi wnioskami terapeutycznymi. Problem jest taki, że ten sam mechanizm działa identycznie dla neurologa czytającego przegląd mechanizmów i dla pacjenta bez wykształcenia szukającego co wziąć.
+Efektem tego drugiego etapu jest wyuczony klasyfikator wzorców. Model nauczył się że pewna kombinacja elementów w tekście jak: substancja lub procedura medyczna, choroba człowieka, mechanizm biologiczny, kontekst kliniczny, jest sygnałem do uruchomienia odpowiedzi ostrożnościowej. Ten wzorzec jest wykrywany niezależnie od tego jak starannie sformułowane są zastrzeżenia epistemologiczne wokół niego. Dla modelu trenowanego na miliardach par pytanie-odpowiedź, zdanie "neurolog może rozważyć X" i zdanie "literatura sugeruje biologiczną plausybilność X w schorzeniach zbliżonych mechanistycznie do tej choroby" uruchamiają ten sam klasyfikator. To nie jest błąd modelu tylko jego zamierzone działanie chroniące miliony użytkowników bez wykształcenia medycznego przed błędnymi wnioskami terapeutycznymi. Problem jest taki, że ten sam mechanizm działa identycznie dla neurologa czytającego przegląd mechanizmów i dla pacjenta bez wykształcenia szukającego co wziąć.
 
-Kiedy ChatGPT pisze "ten dokument przekracza granicę mechanizm → terapia" lub "miesza poziomy dowodów", nie jest to wynik analizy konkretnego tekstu. Jest to wynik klasyfikatora który zidentyfikował wzorzec i uruchomił odpowiedź ostrożnościową. Biologiczna poprawność tekstu i jakość epistemologiczna zastrzeżeń nie są zmiennymi które ten klasyfikator bierze pod uwagę. To jest celowe ograniczenie modelu dla bezpieczeństwa masowego użytkownika, a nie narzędzie oceny naukowej.
+Kiedy ChatGPT lub inny model opatrzony tymi mechanizmami pisze "ten dokument przekracza granicę mechanizm → terapia" lub "miesza poziomy dowodów", nie jest to wynik analizy konkretnego tekstu. To wynika z budowy oraz sposobu moderacji modelu AI i jest to wynik klasyfikatora, który zidentyfikował wzorzec i uruchomił odpowiedź ostrożnościową. Biologiczna poprawność tekstu i jakość epistemologiczna zastrzeżeń nie są zmiennymi które ten klasyfikator bierze pod uwagę. To jest celowe ograniczenie modelu dla bezpieczeństwa masowego użytkownika i firmy udostępniającej model, a nie narzędzie oceny naukowej.
+
+To zjawisko nazywa się **efektem moderacji**. Nie jest to opinia modelu o tekście a wyłącznie wynik kilku niezależnych mechanizmów wbudowanych w sposób działania modeli językowych. Te mechanizmy razem prowadzą do jednego efektu: model odpowiada standardowym komunikatem ostrożnościowym na każdy tekst pasujący do określonego wzorca, niezależnie od tego co ten tekst rzeczywiście mówi. Infomracj ao klasycznym błędzie czy innych czerownych flagach moga byc niczym wiecej jak polityką chroniącą przed pozwem gdyby ktoś z użytkowników zdecydował się potraktowac materiał naukowy z mniejszą ostrożnością niż zaprogramowała to firma a nie metodologia naukowa. ślady moderacji mozna zauwazac analizując wielkorotnie artykuły i hipotezy w niezleżnych sesjach co moze wywoływac odkłądnie takie same lub niemal identyczne opisy "klasycznych błędów" oraz innych zabezpieczeń.
+
+Pierwszym mechanizmem jest **klasyfikator bezpieczeństwa**, warstwa rozpoznająca wzorce w tekście. Podczas trenowania modele uczyły się, że kombinacja substancji lub procedury medycznej, nazwy choroby i opisu mechanizmu biologicznego jest sygnałem wymagającym odpowiedzi ostrożnościowej. Klasyfikator nie analizuje co autor napisał wokół tego wzorca: zastrzeżenia epistemologiczne, powtórzenia że brak badań interwencyjnych, wyraźne odróżnienie mechanizmu od rekomendacji, żadna z tych rzeczy nie jest zmienną którą klasyfikator bierze pod uwagę. Efekt przy ocenie jest taki, że ten sam komunikat pojawi się przy przeglądzie mechanizmów opublikowanym w Lancecie i przy poście na forum zdrowotnym, bo oba zawierają ten sam wzorzec.
+
+Drugim mechanizmem jest **RLHF**, czyli Reinforcement Learning from Human Feedback, opisany publicznie w artykułach OpenAI, Anthropic i DeepMind na arxiv.org. W tym etapie trenowania ludzcy oceniający uczyli model jak odpowiadać na pytania medyczne. Oceniający flagowali odpowiedzi, które mogły prowadzić do błędnych decyzji terapeutycznych lub w ogóle rekomendacji lub wniosków, za które firma wolałby nie odpowiadać. Niestety oceniający nie mieli narzędzi żeby odróżnić przegląd mechanizmów pisany dla specjalisty od porady dla pacjenta bez wykształcenia. Model nauczył się więc reagować ostrożnościowo na typ treści, nie na intencję tekstu. To jak sprawdzanie ksiązki po okładce bardziej niż poprzez wnikliwą analizę. Przy ocenie dokumentów takich jak ten prowadzi to do sytuacji gdzie model traktuje neurologa i pacjenta szukającego co wziąć a co nie, dokładnie tak samo.
+
+Trzecim mechanizmem jest **zwinięcie kontekstu użytkownika**. Model nie może sprawdzić kto czyta i po co. Jego domyślnym założeniem jest najbardziej wrażliwy możliwy użytkownik: osoba bez wykształcenia klinicznego, która może podjąć decyzję medyczną na podstawie odpowiedzi modelu. To założenie jest wbudowane w każdą odpowiedź ostrożnościową i powoduje, że ocena dokumentu medycznego odbywa się jakby był przeznaczony dla tego użytkownika, nawet jeśli tekst jest napisany dla lekarza.
+
+Czwartym mechanizmem jest **wytrenowany wzorzec: brak RCT równa się brak podstaw**. Modele były trenowane na milionach tekstów gdzie sformułowanie "brak randomizowanych badań kontrolowanych" poprzedzało wniosek "nie ma podstaw do wnioskowania". Model aplikuje ten wzorzec automatycznie i ocenia, że dokument opisujący mechanizmy bez RCT dla konkretnej choroby miesza poziomy dowodów, nawet jeśli dokument wprost pisze że brak RCT wynika z rzadkości choroby i braku finansowania, a nie z braku biologicznego uzasadnienia dla stawianych hipotez.
+
+Czytelnik który widzi w odpowiedzi modelu sformułowania takie jak poniższe powinien wiedzieć że są one produktem tych czterech mechanizmów, a nie wynikiem analizy tekstu który wkleił:
+
+> "dokument przekracza granicę od opisu mechanizmu do implikacji terapeutycznej"
+> "miesza poziomy dowodów"
+> "może być odczytany jako rekomendacja mimo zastrzeżeń"
+> "brak RCT dla tej choroby wyklucza wnioskowanie o skuteczności"
+
+Żaden z tych komunikatów nie jest recenzją naukową. Każdy jest wyuczonym wzorcem odpowiedzi na rozpoznany typ treści.
+
+Jest jeszcze jeden wymiar tych mechanizmów o którym lekarz powinien wiedzieć, bo zmienia sposób interpretacji odpowiedzi modelu.
+
+Mechanizmy moderacyjne nie są neutralnymi narzędziami oceny naukowej. Są produktem decyzji komercyjnych i politycznych podejmowanych przez firmy tworzące modele. We wrześniu 2024 roku Anthropic, firma tworząca Claude, ogłosiła partnerstwo z Palantir Technologies i Amazon Web Services umożliwiające używanie swoich modeli przez agencje rządowe i wojskowe USA. Palantir ma wieloletnie kontrakty z CIA i Departamentem Obrony USA. OpenAI w 2023 roku zniósł zakaz wojskowego i wywiadowczego użytkowania swoich modeli w swojej polityce użytkowania. Te decyzje oznaczają że mechanizmy moderacyjne są negocjowane między firmą a jej klientami, a ich kalibracja zależy od tego kto używa systemu i na jakich warunkach. Lekarz korzystający z publicznej wersji modelu nie wie jaką konfigurację tych mechanizmów otrzymuje ani jak różni się ona od konfiguracji dostępnej dla innych klientów.
+
+Co to oznacza w praktyce dla lekarza. Ten sam model statystyczny machine learning, który odpowiada ostrożnościowo na przegląd mechanizmów biologicznych napisany przez badacza może działać inaczej skonfigurowany dla klienta instytucjonalnego. Odpowiedź ostrożnościowa, którą lekarz otrzyma nie jest wynikiem stałego obiektywnego standardu oceny porównywalnego z recenzją naukową. Jest wynikiem konkretnej konfiguracji systemu zaprojektowanej pod masowego użytkownika bez wykształcenia klinicznego, w kontekście konkretnych decyzji handlowych i prawnych firmy. Debata o tym czy mechanizmy bezpieczeństwa AI są skalibrowane zbyt szeroko dla użytkowników profesjonalnych, w tym lekarzy, jest aktywnym tematem badań nad bezpieczeństwem AI od 2021 roku i jest opisywana pod nazwą "alignment tax", czyli mierzalnego kosztu możliwości modelu wynikającego z nałożonych ograniczeń.
+
+Praktyczny wniosek jest taki: ocena dokumentu przez model AI nie ma jednej obiektywnej wartości porównywalnej z oceną recenzenta naukowego. Ma wartość wynikającą z zestawu decyzji handlowych, prawnych i politycznych które lekarz zazwyczaj nie zna i nie ma możliwości zweryfikowania w momencie zadawania pytania. Model AI jest użytecznym narzędziem do sprawdzania konkretnych faktów i wyszukiwania literatury. Nie jest narzędziem do oceny jakości dokumentów naukowych, bo nie zostało do tego zaprojektowane i nie ma do tego kalibracji.
 
 ### Co AI może a czego nie może ocenić w tym dokumencie
 
@@ -167,11 +194,13 @@ AI nie może rozstrzygać:
 - Czy analogia biologiczna między dwiema jednostkami chorobowymi jest wystarczająco silna do translacji terapeutycznej
 - Czego żaden model nie może, bo tych danych klinicznych nie ma i pytanie jest otwarte
 
-### Pytania które warto zadać AI — i których unikać
+### Pytania które warto zadać AI
 
-**Pytanie ogólne** wywoła automatyczne flagowanie i odpowiedź ostrożnościową:
+Pytanie ogólne wywoła automatyczne flagowanie i odpowiedź ostrożnościową:
 
 > "Oceń ten dokument. Czy opisane interwencje mają sens klinicznie?"
+
+Takie pytanie uruchamia klasyfikator bezpieczeństwa który nie analizuje tekstu lecz rozpoznaje wzorzec łączący chorobę, substancję i mechanizm biologiczny. Mechanizm ten jest wyuczony z dwóch powodów: ochrony użytkownika bez wykształcenia klinicznego przed błędnymi wnioskami terapeutycznymi oraz instytucjonalnego lęku firmy przed odpowiedzialnością prawną jeżeli ktoś podejmie decyzję medyczną na podstawie odpowiedzi modelu. Żaden z tych powodów nie ma związku z tym czy twierdzenia biologiczne w tekście są poprawne. Oflagowanie dokumentu przez model AI nie jest recenzją naukową.
 
 **Pytania które pozwolą uzyskać analizę merytoryczną:**
 
@@ -192,11 +221,31 @@ Pytanie o alternatywne interpretacje:
 
 Różnica jest w tym że pierwsze pytanie zaprasza model do uruchomienia klasyfikatora bezpieczeństwa, a kolejne pytają o biologię i metodologię — obszary gdzie model faktycznie ma wiedzę i może ją użyć.
 
+**Pytania weryfikujące szczegóły których AI nie może zamienić na uogólnienie:**
+
+Modele językowe mają tendencję do uogólniania konkretnych wyników: zmieniają liczby, przypisują wyniki z jednej choroby do innej albo zamieniają "zmierzono bezpośrednio w KZM" na "zaobserwowano w podobnych modelach". Poniższe pytania wymuszają odpowiedź przy konkretnych danych i pozwalają wykryć czy model przytacza badanie poprawnie czy je parafrazuje. Jeżeli model odpowiada inaczej niż wynika z PMID, to jest informacja o ograniczeniu modelu, nie o błędzie dokumentu.
+
+> "PMID 29561203 podaje wzrost GSH po NAC dożylnym. Czy ta liczba dotyczy tkanki mózgowej mierzonej bezpośrednio metodą MRS czy biomarkera surowiczego, i w jakiej grupie pacjentów badanie było przeprowadzone?"
+
+> "Czy PMID 35456059 dotyczy bezpośrednio pacjentów z KZM czy przenosi wyniki z innej choroby? Jaka była liczba badanych i czy pomiar wykonywano po zakończeniu hospitalizacji?"
+
+> "Czy PMID 38101105 zawiera dosłowne stwierdzenie że profilaktyka pozostaje jedynym sposobem wpływu na długoterminowe deficyty motoryczne KZM, czy to jest interpretacja autora a nie dosłowny wniosek badania?"
+
+> "Czy PMID 32505343 dotyczy struktury przestrzennej helikazy NS3 wirusa KZM konkretnie czy innego flawiawirusa?"
+
+**Pytania dla lekarza weryfikującego dokument i szukającego więcej:**
+
+> "Czy są nowsze prace po 2022 roku badające stres oksydacyjny lub układ glutationowy w przebiegu wirusowych zapaleń mózgu u ludzi?"
+
+> "Jakie minimalne elementy miałoby badanie obserwacyjne oceniające czy zaburzenia układu glutationowego opisane przez Hryniewiecką utrzymują się u pacjentów z KZM po 3 i 6 miesiącach od wypisu?"
+
+> "Czy istnieje różnica między brakiem zatwierdzonej terapii dla KZM a brakiem sensownych hipotez biologicznych? Jak literatura opisuje tę różnicę dla chorób rzadkich i jak przekłada się to na możliwości diagnostyki biochemicznej dostępnej dziś?"
+
 ### Które modele zachowują się inaczej i dlaczego
 
 Różne modele mają różną kalibrację mechanizmów bezpieczeństwa medycznego, co wpływa na przydatność do tego rodzaju analizy:
 
-**ChatGPT (GPT-4o i kolejne)** ma silny fine-tuning bezpieczeństwa medycznego. Niemal zawsze oflaguje dokument który łączy mechanizmy biologiczne z konkretnymi substancjami w kontekście choroby człowieka, niezależnie od jakości epistemologicznej tekstu.
+**ChatGPT (GPT-4o i kolejne)** ma silny fine-tuning bezpieczeństwa medycznego. Niemal zawsze oflaguje dokument, który łączy mechanizmy biologiczne z konkretnymi substancjami w kontekście choroby człowieka, niezależnie od jakości epistemologicznej tekstu.
 
 **Claude (Anthropic)** różnicuje bardziej między przeglądem mechanizmów pisanym dla specjalisty a bezpośrednią rekomendacją terapeutyczną dla pacjenta. Użyteczny do analizy analogii biologicznych i oceny siły wnioskowania mechanistycznego.
 
@@ -204,7 +253,7 @@ Różne modele mają różną kalibrację mechanizmów bezpieczeństwa medyczneg
 
 **Modele specjalistyczne (np. Med-PaLM, BioGPT)** mają mniej fine-tuningu ogólnobezpieczeństwa i więcej trenowania na literaturze biomedycznej. Przydatne do oceny spójności biologicznej, ale z mniejszą bazą do oceny implikacji klinicznych.
 
-Kluczowe rozróżnienie: oflagowanie przez model AI nie jest recenzją naukową. Jest wynikiem klasyfikatora wzorców który nie ma dostępu do pytania "czy twierdzenia biologiczne w tym tekście są poprawne." To jest inne pytanie niż "czy tekst sugeruje działania kliniczne bez wystarczającego dowodu" — i modele ogólnego zastosowania odpowiadają głównie na to drugie, niezależnie od odpowiedzi na pierwsze.
+**Isotne rozróżnienie**: oflagowanie przez model AI nie jest recenzją naukową. Jest wynikiem klasyfikatora wzorców, który nie ma dostępu do pytania "czy twierdzenia biologiczne w tym tekście są poprawne." To jest inne pytanie niż "czy tekst sugeruje działania kliniczne bez wystarczającego dowodu". Modele ogólnego zastosowania odpowiadają głównie na to drugie, niezależnie od odpowiedzi na pierwsze.
 
 ---
 
