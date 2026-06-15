@@ -144,7 +144,7 @@ Brak badań klinicznych w KZM nie pozwala wnioskować o skuteczności ani niesku
 
 ## Jak weryfikować ten dokument z pomocą modeli AI
 
-Modele językowe AI są użytecznym narzędziem do weryfikacji twierdzeń biologicznych. Jednak ich zachowanie przy ocenie dokumentów medycznych nie jest neutralną analizą naukową — jest wynikiem trenowania i wymaga zrozumienia co te modele faktycznie robią, żeby pytania były użyteczne.
+Modele językowe AI są użytecznym narzędziem do weryfikacji twierdzeń biologicznych. Jednak ich zachowanie przy ocenie dokumentów medycznych nie jest neutralną analizą naukową tylko wynikiem trenowania i wymaga zrozumienia co te modele faktycznie robią, żeby pytania były użyteczne.
 
 ### Dlaczego ChatGPT prawie zawsze oflaguje taki dokument
 
@@ -219,7 +219,7 @@ Pytanie o luki, nie o wnioski:
 Pytanie o alternatywne interpretacje:
 > "Czy istnieją alternatywne wyjaśnienia dla wzrostu GSH mierzonego MRS po NAC IV inne niż neuroprotekcja? Jak to ogranicza wniosek translacyjny?"
 
-Różnica jest w tym że pierwsze pytanie zaprasza model do uruchomienia klasyfikatora bezpieczeństwa, a kolejne pytają o biologię i metodologię — obszary gdzie model faktycznie ma wiedzę i może ją użyć.
+Różnica jest w tym, że pierwsze pytanie zaprasza model do uruchomienia klasyfikatora bezpieczeństwa, a kolejne pytają o biologię i metodologię czyli obszary gdzie model faktycznie ma wiedzę i może ją użyć.
 
 **Pytania weryfikujące szczegóły których AI nie może zamienić na uogólnienie:**
 
