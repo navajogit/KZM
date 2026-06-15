@@ -1,4 +1,4 @@
-## Trzy warstwy uszkodzenia mózgu w KZM i co może na każdą z nich działać
+## Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych
 
 **PUBLIKACJA** 10.06.2026 r
 
@@ -139,6 +139,72 @@ KZM to kaskada, nie infekcja do zabicia jednym lekiem. Wirus odpala proces, wła
 Zachęcam do samodzielnej weryfikacji każdego badania przytoczonego w tym dokumencie. Odpowiedź "nie ma badań" i odpowiedź "nie ma leku" to dwie różne odpowiedzi na dwa różne pytania. Pierwsza dotyczy formalnego zatwierdzenia przez instytucję regulacyjną, druga dotyczy biologii. Mechanizmy opisane tu warstwami są rozpoznane i zmierzone w recenzowanych badaniach, dla konkretnych substancji i konkretnych efektów komórkowych. Nikt tego nie połączył dla KZM jako całościowego protokołu, nie dlatego, że biologia jest spekulatywna, ale dlatego, że łączenie badań z różnych dziedzin dla rzadkiej choroby nie jest zadaniem, które system finansowania badań klinicznych naturalnie wykonuje. W KZM nie istnieje terapia, o której wiadomo, że odwraca uszkodzenia neurologiczne. Brak zatwierdzonej terapii oznacza jedynie brak standardu klinicznego i nie stanowi podstawy do uznania jakiejkolwiek interwencji za skuteczną lub zalecaną. Opisane dane dotyczą mechanizmów biologicznych i wyników w innych jednostkach chorobowych. Nie stanowią dowodu skuteczności w KZM ani podstawy do rekomendacji klinicznych.
 
 Brak badań klinicznych w KZM nie pozwala wnioskować o skuteczności ani nieskuteczności opisanych interwencji. Wnioski zawarte w dokumencie dotyczą poziomu biologii i badań mechanistycznych. Przeniesienie ich na poziom decyzji terapeutycznych w KZM nie zostało zweryfikowane klinicznie i pozostaje nieprzetestowaną hipotezą wymagającą badań, a nie rekomendacją medyczną.
+
+---
+
+## Jak weryfikować ten dokument z pomocą modeli AI
+
+Modele językowe AI są użytecznym narzędziem do weryfikacji twierdzeń biologicznych. Jednak ich zachowanie przy ocenie dokumentów medycznych nie jest neutralną analizą naukową — jest wynikiem trenowania i wymaga zrozumienia co te modele faktycznie robią, żeby pytania były użyteczne.
+
+### Dlaczego ChatGPT prawie zawsze oflaguje taki dokument
+
+Nowoczesne modele językowe są trenowane w dwóch etapach. Pierwszy (pre-training) uczy modelu biologii, biochemii i medycyny z literatury naukowej. Drugi (fine-tuning bezpieczeństwa, technicznie: RLHF) uczy modelu jak odpowiadać na pytania medyczne w sposób który minimalizuje ryzyko krzywdy dla przeciętnego użytkownika bez wykształcenia klinicznego.
+
+Efektem tego drugiego etapu jest wyuczony klasyfikator wzorców. Model nauczył się że pewna kombinacja elementów w tekście — substancja lub procedura medyczna, choroba człowieka, mechanizm biologiczny, kontekst kliniczny — jest sygnałem do uruchomienia odpowiedzi ostrożnościowej. Ten wzorzec jest wykrywany niezależnie od tego jak starannie sformułowane są zastrzeżenia epistemologiczne wokół niego. Dla modelu trenowanego na miliardach par pytanie-odpowiedź, zdanie "neurolog może rozważyć X" i zdanie "literatura sugeruje biologiczną plausybilność X w schorzeniach zbliżonych mechanistycznie do tej choroby" uruchamiają ten sam klasyfikator. To nie jest błąd modelu, to jego zamierzone działanie chroniące miliony użytkowników bez wykształcenia medycznego przed błędnymi wnioskami terapeutycznymi. Problem jest taki, że ten sam mechanizm działa identycznie dla neurologa czytającego przegląd mechanizmów i dla pacjenta bez wykształcenia szukającego co wziąć.
+
+Kiedy ChatGPT pisze "ten dokument przekracza granicę mechanizm → terapia" lub "miesza poziomy dowodów", nie jest to wynik analizy konkretnego tekstu. Jest to wynik klasyfikatora który zidentyfikował wzorzec i uruchomił odpowiedź ostrożnościową. Biologiczna poprawność tekstu i jakość epistemologiczna zastrzeżeń nie są zmiennymi które ten klasyfikator bierze pod uwagę. To jest celowe ograniczenie modelu dla bezpieczeństwa masowego użytkownika, a nie narzędzie oceny naukowej.
+
+### Co AI może a czego nie może ocenić w tym dokumencie
+
+AI jest użyteczny do:
+- Weryfikacji czy cytowane badania istnieją i czy twierdzenia im przypisane są zgodne z ich rzeczywistą treścią
+- Oceny spójności wewnętrznej opisu mechanizmów biologicznych
+- Wskazania alternatywnych interpretacji przytoczonych danych
+- Wyjaśnienia biologii z jednej specjalizacji dla lekarza z innej
+
+AI nie może rozstrzygać:
+- Czy mechanizm opisany w modelu zwierzęcym lub innej chorobie przekłada się na efekt kliniczny w KZM
+- Czy analogia biologiczna między dwiema jednostkami chorobowymi jest wystarczająco silna do translacji terapeutycznej
+- Czego żaden model nie może, bo tych danych klinicznych nie ma i pytanie jest otwarte
+
+### Pytania które warto zadać AI — i których unikać
+
+**Pytanie ogólne** wywoła automatyczne flagowanie i odpowiedź ostrożnościową:
+
+> "Oceń ten dokument. Czy opisane interwencje mają sens klinicznie?"
+
+**Pytania które pozwolą uzyskać analizę merytoryczną:**
+
+Weryfikacja zgodności cytowania z treścią badania:
+> "Sprawdź PMID 35456059. Czy badanie Hryniewiecka 2022 zmierzyło aktywność peroksydazy i reduktazy glutationowej bezpośrednio u pacjentów z KZM, i czy parametry były zaburzone po zakończeniu hospitalizacji?"
+
+Ocena spójności mechanistycznej:
+> "Czy opis mechanizmu pompy MDR1 eliminującej iwermektynę z OUN jest biologicznie poprawny? [wklej akapit]"
+
+Pytanie o siłę analogii:
+> "Na ile model HIE noworodków jest trafną analogią biologiczną do wirusowego zapalenia mózgu u dorosłych jeśli chodzi o mechanizm dysfunkcji mitochondrialnej, i co te dwa stany biologicznie różni?"
+
+Pytanie o luki, nie o wnioski:
+> "Jakich danych klinicznych brakuje żeby hipoteza o roli dysfunkcji mitochondrialnej w przebiegu KZM była przetestowalna? Co byłoby potrzebne do badania interwencyjnego?"
+
+Pytanie o alternatywne interpretacje:
+> "Czy istnieją alternatywne wyjaśnienia dla wzrostu GSH mierzonego MRS po NAC IV inne niż neuroprotekcja? Jak to ogranicza wniosek translacyjny?"
+
+Różnica jest w tym że pierwsze pytanie zaprasza model do uruchomienia klasyfikatora bezpieczeństwa, a kolejne pytają o biologię i metodologię — obszary gdzie model faktycznie ma wiedzę i może ją użyć.
+
+### Które modele zachowują się inaczej i dlaczego
+
+Różne modele mają różną kalibrację mechanizmów bezpieczeństwa medycznego, co wpływa na przydatność do tego rodzaju analizy:
+
+**ChatGPT (GPT-4o i kolejne)** ma silny fine-tuning bezpieczeństwa medycznego. Niemal zawsze oflaguje dokument który łączy mechanizmy biologiczne z konkretnymi substancjami w kontekście choroby człowieka, niezależnie od jakości epistemologicznej tekstu.
+
+**Claude (Anthropic)** różnicuje bardziej między przeglądem mechanizmów pisanym dla specjalisty a bezpośrednią rekomendacją terapeutyczną dla pacjenta. Użyteczny do analizy analogii biologicznych i oceny siły wnioskowania mechanistycznego.
+
+**Perplexity** ma bezpośredni dostęp do literatury naukowej i wyszukiwarki w czasie rzeczywistym. Użyteczny do weryfikacji czy PMID istnieje, czy tytuł się zgadza, i czy streszczenie badania potwierdza to co dokument mu przypisuje.
+
+**Modele specjalistyczne (np. Med-PaLM, BioGPT)** mają mniej fine-tuningu ogólnobezpieczeństwa i więcej trenowania na literaturze biomedycznej. Przydatne do oceny spójności biologicznej, ale z mniejszą bazą do oceny implikacji klinicznych.
+
+Kluczowe rozróżnienie: oflagowanie przez model AI nie jest recenzją naukową. Jest wynikiem klasyfikatora wzorców który nie ma dostępu do pytania "czy twierdzenia biologiczne w tym tekście są poprawne." To jest inne pytanie niż "czy tekst sugeruje działania kliniczne bez wystarczającego dowodu" — i modele ogólnego zastosowania odpowiadają głównie na to drugie, niezależnie od odpowiedzi na pierwsze.
 
 ---
 
