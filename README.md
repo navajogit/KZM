@@ -1,5 +1,9 @@
 # KZM / TBE / niezależny research: hipotezy translacyjne i prawa rodziny
 
+**Data Publikacji:** 16.06.2026
+
+**QR do tego repozytorium:**
+
 ![QR kod do repozytorium](./qr_kzm.jpg)
 
 Repozytorium zawiera dwa dokumenty dotyczące kleszczowego zapalenia mózgu (KZM, ang. tick-borne encephalitis, TBE): jeden poświęcony mechanizmom biologicznym choroby, drugi prawom i praktycznym możliwościom działania rodzin pacjentów. Oba zostały opracowane przez osobę zajmującą się interdyscyplinarnym researchem i bezpośrednią weryfikacją źródeł pierwotnych, nie przez klinicystę. Wszystkie twierdzenia są poparte numerami PMID lub adresami aktów prawnych możliwymi do niezależnej weryfikacji.
