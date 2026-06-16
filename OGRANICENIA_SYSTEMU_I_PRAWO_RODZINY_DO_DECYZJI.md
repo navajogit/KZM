@@ -163,7 +163,7 @@ Dla rodzin żyjących z innymi chorobami rzadkimi, dla których nie istnieje zat
 
 Biologia nie czeka na prawo. To, o czym ten dokument i towarzyszący mu materiał o mechanizmach biologicznych mówią, dzieje się teraz, w żywych komórkach nerwowych, które stracą funkcję trwale albo nie. System będzie powoli aktualizował swoje wytyczne przez kolejną dekadę. Rodzina ma do dyspozycji prawo, piśmiennictwo i lekarza prowadzącego, który ma ustawowy obowiązek działać zgodnie z aktualną wiedzą medyczną. To nie jest wiele. Ale to jest więcej niż "nic nie można zrobić".
 
----
+
 
 ## Dokumenty i źródła do weryfikacji
 
