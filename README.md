@@ -15,9 +15,4 @@ Dokument opisuje trzy nakładające się procesy biologiczne aktywne w przebiegu
 
 Dokument uzupełniający skierowany do rodzin pacjentów z KZM. Wyjaśnia, dlaczego neurolog mówi "nie ma leczenia" i co to zdanie faktycznie opisuje: stan zatwierdzeń regulacyjnych, nie stan wiedzy biologicznej. Omawia polskie prawo lekarskie (art. 4 ustawy o zawodach lekarza i możliwość stosowania leków off-label), europejskie instrumenty prawne (dyrektywa 2011/24/UE, ERN-RND), konkretne badania diagnostyczne dostępne teraz w Polsce bez skierowania, ścieżkę prywatnej opieki jako realną alternatywę wobec impasu w systemie publicznym, oraz co zrobić praktycznie: od wniosku o konsultację w Europejskiej Sieci Referencyjnej po kontakt z Kliniką Chorób Zakaźnych i Neuroinfekcji w Białymstoku, jedynym polskim ośrodkiem prowadzącym własne badania nad stresem oksydacyjnym w KZM.
 
-
-## [Jak cytować](./CITATION.md)
-
-Gotowe formaty cytowania w APA, Vancouver i BibTeX oraz instrukcja uzyskania DOI przez Zenodo.
-
 *Ostatnia aktualizacja: czerwiec 2026*
