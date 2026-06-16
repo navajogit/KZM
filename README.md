@@ -2,7 +2,7 @@
 
 # Kleszczowe zapalenie mózgu (KZM). Repozytorium dokumentów
 
-**PUBLIKACJA** 15.06.2026 r
+**PUBLIKACJA** 16.06.2026 r
 
 *Link do tego repozytorium:*
 
