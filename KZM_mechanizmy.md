@@ -1,4 +1,4 @@
-## Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych
+# Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych
 
 *Poniższy dokument stanowi naukową podstawę i zebrany materiał badawczy dla dokumentu uzupełniającego [Ograniczenia systemu i prawo rodziny do decyzji](https://github.com/navajogit/KZM/blob/main/OGRANICENIA_SYSTEMU_I_PRAWO_RODZINY_DO_DECYZJI.md), który omawia co z tej biologii wynika dla rodzin pacjentów z KZM: jakie prawa im przysługują, jakie narzędzia prawne i diagnostyczne są dostępne teraz i jak w praktyce rozmawiać z systemem ochrony zdrowia.*
 
