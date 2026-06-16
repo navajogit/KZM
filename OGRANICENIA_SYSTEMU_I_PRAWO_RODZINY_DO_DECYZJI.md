@@ -2,7 +2,7 @@
 
 **Dokument uzupełniający do: [Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych](https://github.com/navajogit/KZM/blob/main/KZM_mechanizmy.md)**
 
-*15 czerwca 2026 r.*
+*16 czerwca 2026 r.*
 
 
 
