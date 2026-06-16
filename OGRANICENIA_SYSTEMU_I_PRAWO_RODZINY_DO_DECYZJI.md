@@ -2,7 +2,8 @@
 
 **Dokument uzupełniający do: [Trzy warstwy uszkodzenia mózgu w KZM: przegląd mechanizmów biologicznych i hipotez badawczych](https://github.com/navajogit/KZM/blob/main/KZM_mechanizmy.md)**
 
-DATA PUBLIKACJI: **16 czerwca 2026 r.**
+*15 czerwca 2026 r.*
+
 
 
 Kiedy neurolog mówi rodzinie pacjenta z kleszczowym zapaleniem mózgu, że "nie ma leczenia przyczynowego i możemy jedynie obserwować", to zdanie jest prawdziwe w bardzo wąskim sensie. Opisuje stan zatwierdzeń regulacyjnych w tej konkretnej chorobie. Ale dla rodziny brzmi jak wyrok, i to wyrok wydany przez kogoś, kto wcale nie musi być wrogiem pacjenta, tylko sam jest więźniem systemu, który w tym miejscu produkuje właśnie taką odpowiedź. To, co opisano poniżej, nie jest próbą podważenia kompetencji lekarzy. Jest próbą pokazania, jak system medyczny wytwarza bezradność strukturalnie i co z tej analizy wynika dla rodziny, która nie ma zamiaru czekać na zatwierdzoną terapię, która prawdopodobnie nigdy nie powstanie.
