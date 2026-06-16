@@ -1,4 +1,4 @@
-# KZM / TBE — niezależny research: hipotezy translacyjne i prawa rodziny
+# KZM / TBE / niezależny research: hipotezy translacyjne i prawa rodziny
 
 ![QR kod do repozytorium](./qr_kzm.jpg)
 
